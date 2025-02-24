@@ -22,7 +22,7 @@ public class Program {
 		Student stu = new Student(name, age, gra);
 
 		System.out.println("Student: ");
-		System.out.println("Name: " + stu.getName());
+		System.out.print("Name: " + stu.getName());
 		System.out.println("Age: " + stu.getAge());
 		System.out.println("Grades: " + stu.getGrades());
 		

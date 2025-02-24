@@ -1,0 +1,16 @@
+package entities;
+
+public class Student {
+
+		String name;
+		Integer age;
+		Double grades;
+		
+		
+		public Student (String name, Integer age, Double grades) {
+			this.name = name;
+			this.age = age;
+			this.grades = grades;
+		}
+		
+}
