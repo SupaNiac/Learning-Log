@@ -25,6 +25,8 @@ public class Program {
 		System.out.println("Name: " + stu.getName());
 		System.out.println("Age: " + stu.getAge());
 		System.out.println("Grades: " + stu.getGrades());
+
+		System.out.println("Testing intelliJ");
 		
 		sc.close();
 	}
