@@ -1,5 +1,6 @@
 package application;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import entities.Student;
@@ -7,7 +8,8 @@ import entities.Student;
 public class Program {
 
 	public static void main(String[] args) {
-	
+
+		ArrayList<Double> list = new ArrayList<>();
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.print("Type student name: ");
@@ -24,10 +26,9 @@ public class Program {
 		System.out.println("Student: ");
 		System.out.println("Name: " + stu.getName());
 		System.out.println("Age: " + stu.getAge());
-		System.out.println("Grades: " + stu.getGrades());
-
-		System.out.println("Testing intelliJ");
-		
+		for (int i = 0; i == 3; i++) {
+			System.out.println("Grades: " + list.add(stu.getGrades()));
+		}
 		sc.close();
 	}
 
