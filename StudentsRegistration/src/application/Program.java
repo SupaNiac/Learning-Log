@@ -17,18 +17,21 @@ public class Program {
 		
 		System.out.print("Type student age: ");
 		int age = sc.nextInt();
-		
-		System.out.print("Type student grades: ");
-		double gra = sc.nextDouble();
-		
-		Student stu = new Student(name, age, gra);
+
+		for (int i = 1; i <= 3; i++) {
+			System.out.print("Type student grades: ");
+			double gra = sc.nextDouble();
+			list.add(gra);
+		}
+		System.out.println();
+
+        Student stu = new Student(name, age, list);
 
 		System.out.println("Student: ");
 		System.out.println("Name: " + stu.getName());
 		System.out.println("Age: " + stu.getAge());
-		for (int i = 0; i == 3; i++) {
-			System.out.println("Grades: " + list.add(stu.getGrades()));
-		}
+		System.out.printf("Average grade:  %.2f%n", stu.avarageScore(list));
+
 		sc.close();
 	}
 

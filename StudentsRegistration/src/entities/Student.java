@@ -1,16 +1,15 @@
 package entities;
+import java.util.ArrayList;
 
 public class Student {
 
-		String name;
-		Integer age;
-		Double grades;
+		private String name;
+		private Integer age;
+		private ArrayList<Double> grades;
 		
-		
-		public Student (String name, Integer age, Double grades) {
+		public Student (String name, Integer age, ArrayList<Double> grades) {
 			this.name = name;
 			this.age = age;
-			this.grades = grades;
 		}
 
 
@@ -34,17 +33,21 @@ public class Student {
 		}
 
 
-		public Double getGrades() {
+		public ArrayList<Double> getGrades() {
 			return grades;
 		}
 
 
-		public void setGrades(Double grades) {
+		public void setGrades(ArrayList<Double> grades) {
 			this.grades = grades;
 		}
 		
-		public double avarageScore(Double grades) {
-			return grades + grades + grades / 3;
+		public double avarageScore(ArrayList<Double> grades) {
+			double sum = 0;
+			for (double grade : grades){
+				sum += grade;
+			}
+			return sum / grades.size();
 		}
 		
 }
