@@ -24,19 +24,31 @@ public class Program {
 				if (age <= 0) {
 					System.out.println("Invalid age, try again!");
 				}
-			}
-			catch (InputMismatchException e) {
+			} catch (InputMismatchException e) {
 				System.out.println("Invalid input, try again!");
 				sc.nextLine();
 			}
-		} while (age <= 0) ;
+		} while (age <= 0);
 
 		ArrayList<Double> grades = new ArrayList<>();
-		for (int i = 1; i <= 3; i++) {
-			System.out.print("Type student grades " + i + ":");
-			double grade = sc.nextDouble();
-			grades.add(grade);
-		}
+			for (int i = 1; i <= 3; i++) {
+				double grade = -1;
+				do {
+					try {
+						System.out.println("Type students grade " + i + ":");
+						grade = sc.nextDouble();
+
+						if (grade < 0 || grade > 10) {
+							System.out.println("Try a number between 0 and 10!");
+						}
+					}catch (InputMismatchException e) {
+						System.out.println("Invalid input, try again!");
+						sc.nextLine();
+					}
+				} while (grade < 0 || grade > 10);
+				grades.add(grade);
+			}
+
 		System.out.println();
 
         Student stu = new Student(name, age, grades);
