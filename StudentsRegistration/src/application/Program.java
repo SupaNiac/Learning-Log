@@ -9,7 +9,6 @@ public class Program {
 
 	public static void main(String[] args) {
 
-		ArrayList<Double> list = new ArrayList<>();
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.print("Type student name: ");
@@ -18,19 +17,20 @@ public class Program {
 		System.out.print("Type student age: ");
 		int age = sc.nextInt();
 
+		ArrayList<Double> grades = new ArrayList<>();
 		for (int i = 1; i <= 3; i++) {
-			System.out.print("Type student grades: ");
-			double gra = sc.nextDouble();
-			list.add(gra);
+			System.out.print("Type student grades " + i + ":");
+			double grade = sc.nextDouble();
+			grades.add(grade);
 		}
 		System.out.println();
 
-        Student stu = new Student(name, age, list);
+        Student stu = new Student(name, age, grades);
 
 		System.out.println("Student: ");
 		System.out.println("Name: " + stu.getName());
 		System.out.println("Age: " + stu.getAge());
-		System.out.printf("Average grade:  %.2f%n", stu.avarageScore(list));
+		System.out.printf("Average grade:  %.2f%n", stu.averageScore());
 
 		sc.close();
 	}

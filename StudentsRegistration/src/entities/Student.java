@@ -10,10 +10,12 @@ public class Student {
 		public Student (String name, Integer age, ArrayList<Double> grades) {
 			this.name = name;
 			this.age = age;
+			this.grades = grades;
 		}
 
 
 		public String getName() {
+
 			return name;
 		}
 
@@ -24,6 +26,7 @@ public class Student {
 
 
 		public Integer getAge() {
+
 			return age;
 		}
 
@@ -42,7 +45,11 @@ public class Student {
 			this.grades = grades;
 		}
 		
-		public double avarageScore(ArrayList<Double> grades) {
+		public double averageScore() {
+			if (grades.isEmpty()){
+				return 0;
+			}
+
 			double sum = 0;
 			for (double grade : grades){
 				sum += grade;
