@@ -1,6 +1,7 @@
 package application;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import entities.Student;
@@ -10,12 +11,25 @@ public class Program {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
-		
+
 		System.out.print("Type student name: ");
 		String name = sc.nextLine();
-		
-		System.out.print("Type student age: ");
-		int age = sc.nextInt();
+
+		int age = -1;
+		do {
+			try {
+				System.out.print("Type student age: ");
+				age = sc.nextInt();
+
+				if (age <= 0) {
+					System.out.println("Invalid age, try again!");
+				}
+			}
+			catch (InputMismatchException e) {
+				System.out.println("Invalid input, try again!");
+				sc.nextLine();
+			}
+		} while (age <= 0) ;
 
 		ArrayList<Double> grades = new ArrayList<>();
 		for (int i = 1; i <= 3; i++) {
