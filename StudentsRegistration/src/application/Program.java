@@ -12,8 +12,17 @@ public class Program {
 
 		Scanner sc = new Scanner(System.in);
 
-		System.out.print("Type student name: ");
-		String name = sc.nextLine();
+		String name;
+		do {
+				System.out.print("Type student name: ");
+				name = sc.nextLine().trim();
+
+				if (!name.matches("[A-Za-zÀ-ÖØ-öø-ÿ\\s]+")) {
+					System.out.println("Invalid name! Please enter only letters.");
+					name = null;
+				}
+		} while (name == null);
+
 
 		int age = -1;
 		do {
