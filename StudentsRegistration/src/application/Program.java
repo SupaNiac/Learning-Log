@@ -81,12 +81,13 @@ public class Program {
 		System.out.println("Student: ");
 		System.out.println("Name: " + stu.getName());
 		System.out.println("Age: " + stu.getAge());
+		double gf = stu.averageScore();
 
-		if (stu.averageScore() <= 5){
-			System.out.printf("Average grade:  %.2f%n - Failed.%n", stu.averageScore());
+		if (gf <= 5){
+			System.out.printf("Average grade:  %.2f%n - Failed.%n", gf);
 		}
 		else {
-			System.out.printf("Average grade:  %.2f%n - Passed.%n", stu.averageScore());
+			System.out.printf("Average grade:  %.2f%n - Passed.%n", gf);
 		}
 		sc.close();
 	}
