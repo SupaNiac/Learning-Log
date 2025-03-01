@@ -66,11 +66,12 @@ public class Program {
 		System.out.println("Name: " + stu.getName());
 		System.out.println("Age: " + stu.getAge());
 
-		if (stu.averageScore() < 0){
-
+		if (stu.averageScore() <= 5){
+			System.out.printf("Average grade:  %.2f%n - Failed.%n", stu.averageScore());
 		}
-		System.out.printf("Average grade:  %.2f%n", stu.averageScore());
-
+		else {
+			System.out.printf("Average grade:  %.2f%n - Passed.%n", stu.averageScore());
+		}
 		sc.close();
 	}
 
