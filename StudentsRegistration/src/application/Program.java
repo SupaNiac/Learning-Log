@@ -39,12 +39,27 @@ public class Program {
 			}
 		} while (age <= 0);
 
+		int q = -1;
+		do {
+			try {
+				System.out.print("How many grades do you want to add? ");
+				q = sc.nextInt();
+				if (q <= 0) {
+					System.out.println("Invalid number!");
+				}
+			}
+			catch (InputMismatchException e) {
+				System.out.println("Invalid input, try again!");
+				sc.nextLine();
+			}
+		} while (q <= 0);
+
 		ArrayList<Double> grades = new ArrayList<>();
-			for (int i = 1; i <= 3; i++) {
+			for (int i = 0; i < q; i++) {
 				double grade = -1;
 				do {
 					try {
-						System.out.println("Type students grade " + i + ":");
+						System.out.println("Type students grade " + (i + 1) + ":");
 						grade = sc.nextDouble();
 
 						if (grade < 0 || grade > 10) {
