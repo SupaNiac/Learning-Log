@@ -65,6 +65,10 @@ public class Program {
 		System.out.println("Student: ");
 		System.out.println("Name: " + stu.getName());
 		System.out.println("Age: " + stu.getAge());
+
+		if (stu.averageScore() < 0){
+
+		}
 		System.out.printf("Average grade:  %.2f%n", stu.averageScore());
 
 		sc.close();
