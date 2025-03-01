@@ -12,16 +12,16 @@ public class Program {
 
 		Scanner sc = new Scanner(System.in);
 
-		String name;
+		String name = "";
 		do {
 				System.out.print("Type student name: ");
 				name = sc.nextLine().trim();
 
 				if (!name.matches("[A-Za-zÀ-ÖØ-öø-ÿ\\s]+")) {
 					System.out.println("Invalid name! Please enter only letters.");
-					name = null;
+					name = "";
 				}
-		} while (name == null);
+		} while (name.isEmpty());
 
 
 		int age = -1;
