@@ -35,6 +35,7 @@ public class Program {
 				}
 			} catch (InputMismatchException e) {
 				System.out.println("Invalid input, try again!");
+				age = -1;
 				sc.nextLine();
 			}
 		} while (age <= 0);
