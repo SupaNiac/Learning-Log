@@ -3,11 +3,11 @@ package entities;
 public class Client {
 
     private String name;
-    private Integer number;
+    private Integer ID;
 
-    public Client(String name, Integer number){
+    public Client(String name, Integer ID){
         this.name = name;
-        this.number = number;
+        this.ID = ID;
     }
 
     public String getName() {
@@ -15,11 +15,11 @@ public class Client {
     }
 
     public Integer getNumber() {
-        return number;
+        return ID;
     }
 
-    public void setNumber(Integer number) {
-        this.number = number;
+    public void setNumber(Integer ID) {
+        this.ID = ID;
     }
 
 }
