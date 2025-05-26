@@ -45,9 +45,6 @@ public class Program {
             System.out.println("Account created!");
             System.out.println("Name: " + client.getName()  + " Id: " + client.getNumber());
 
-
-
-
             sc.close();
 
 
