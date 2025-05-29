@@ -6,11 +6,12 @@ public class Main {
             Scanner sc = new Scanner(System.in);
             System.out.print("Digite uma palavra e descubra se ela é um palíndromo: ");
             String palavra = sc.nextLine();
-            StringBuilder sb = new StringBuilder(palavra);
+            String palavraTra = palavra.toLowerCase().replaceAll("[^a-z0-9]", "");
+            StringBuilder sb = new StringBuilder(palavraTra);
             String palavraInv = sb.reverse().toString();
 
-            if (palavra.equals(palavraInv)) {
-                System.out.println("Essa palavra é um palíndromo! " + palavra + " | " +palavraInv);
+            if (palavraTra.equals(palavraInv)) {
+                System.out.println("Essa palavra é um palíndromo! " + palavra + " | " + palavraInv);
             }
             else {
                 System.out.println("Essa palavra não é um palíndromo! " + palavra + " | " + palavraInv);
