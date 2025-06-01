@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/GerenciamentoDeFuncionarios/GerenciamentoDeFuncionarios.iml" filepath="$PROJECT_DIR$/GerenciamentoDeFuncionarios/GerenciamentoDeFuncionarios.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Learning Log.iml" filepath="$PROJECT_DIR$/.idea/Learning Log.iml" />
       <module fileurl="file://$PROJECT_DIR$/palindromo/palindromo.iml" filepath="$PROJECT_DIR$/palindromo/palindromo.iml" />
     </modules>
